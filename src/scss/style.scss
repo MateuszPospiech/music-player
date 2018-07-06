@@ -1,0 +1,91 @@
+@import "settings";
+
+html, body{
+    height: 100%;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    color: $color-text;
+    font-family: "proxima nova light", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+    font-size: 18px;
+}  
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 30px;
+}
+.col-1{
+    flex: 1;
+}
+li{
+    list-style-type: none;
+}
+section{
+    padding: 20px 0;
+}
+
+h2{
+    color: $color-main;
+    font-size: 2rem;
+    margin-bottom: 0.3em;
+    line-height: 1.2em;
+    font-family: "neosans regular", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+    font-weight: 400;
+}
+
+/***MAIN***/
+
+#main{
+    color: $color-text;
+    width: 576px;
+    height: auto;
+    background: $color-bg;
+}
+
+    .header__album-title{
+        display: flex;
+        flex-direction: column;
+        flex: auto;
+        align-items: center;
+        
+        p{
+            color: #9a9b9b;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+    }
+    
+    .header__button{
+        align-self: center;
+    }
+
+.slider{
+    //TEMP
+    img{
+        margin: 0 auto;    
+    }
+
+}
+
+.song{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    p{
+         color: #9a9b9b;
+         margin-bottom: 10px;
+          text-transform: uppercase;
+    }
+}
+/***END MAIN***/
+
+
+
+
+
+
