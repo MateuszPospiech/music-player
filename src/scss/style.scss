@@ -9,6 +9,7 @@ body{
     justify-content: center;
     align-items: center;
     
+    background: #222;
     color: $color-text;
     font-family: "proxima nova light", "Helvetica Neue", Helvetica, Arial, Sans-serif;
     font-size: 18px;
@@ -43,9 +44,11 @@ h2{
     color: $color-text;
     width: 576px;
     height: auto;
-    background: $color-bg;
+    background: $color-bg-app;
 }
-
+.header{
+    margin-top: 20px;
+    
     .header__album-title{
         display: flex;
         flex-direction: column;
@@ -58,8 +61,9 @@ h2{
             text-transform: uppercase;
         }
     }
-    
-    .header__button{
+} 
+    .header__button,
+    .header__icon{
         align-self: center;
     }
 
@@ -80,6 +84,55 @@ h2{
          color: #9a9b9b;
          margin-bottom: 10px;
           text-transform: uppercase;
+    }
+}
+
+.button-panel{
+    .col-1{
+        align-self: center;
+        
+        img{
+            margin: 0 auto;
+        }
+    }
+    
+}
+
+.progress-bar{
+    .row{
+        flex-wrap: nowrap;
+    }
+    .progress-bar__line{
+        height: 4px;
+        width: 100%;
+        background: #2a2a2a;
+        margin: 0 20px;
+        align-self: center;
+    }
+}
+
+.bottom-panel{
+    background: $color-bg-bright;
+    color: $color-text-dark;
+    
+    .bottom-panel__icon{
+        display: flex;
+    }
+    .bottom-panel__text{
+        flex-direction: column;
+        margin-left: 40px;
+        
+        p{
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            color: $color-text-next;
+        }
+    }
+    .bottom-panel__time{
+        display: flex;
+        flex: auto;
+        align-items: flex-end;
+        justify-content: flex-end;
     }
 }
 /***END MAIN***/
