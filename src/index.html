@@ -121,11 +121,20 @@
         
         <section class="button-panel">
             <div class="row">
-                <div class="col button-panel__button--shadow"><a href="#"><object id="shuffle_ico" data="img/shuffle_ico.svg" type="image/svg+xml"></object></a></div>
-                <div class="col button-panel__button--shadow button-panel__prev"><a href="#"><img src="img/previous_ico.svg" alt="prev song"></a></div>
-                <div class="col play-inactive" id="play-inactive"><img src="img/Play_inactive.png" alt="play"></div>
-                <div class="col button-panel__button--shadow button-panel__next"><a href="#"><img src="img/next_ico.svg" alt="next song"></a></div>
-                <div class="col button-panel__button--shadow"><a href="#"><img src="img/repeat_ico.svg" alt="repeat"></a></div>
+               <div class="button-panel__col">
+                   <div class="col button-panel__button--shadow"><object id="shuffle_ico" data="img/shuffle_ico.svg" type="image/svg+xml"></object></div>
+                    <div class="col button-panel__button--shadow button-panel__prev"><img src="img/previous_ico.svg" alt="prev song"></div>
+               </div>
+                
+                <div class="col play-inactive" id="play-inactive">
+                    <img src="img/Play_inactive2.png" alt="play">
+                    <div class="button-panel__trigger"></div>
+                </div>
+                
+                <div class="button-panel__col">
+                    <div class="col button-panel__button--shadow button-panel__next"><img src="img/next_ico.svg" alt="next song"></div>
+                    <div class="col button-panel__button--shadow"><img src="img/repeat_ico.svg" alt="repeat"></div>
+                </div>
             </div>
         </section>
         

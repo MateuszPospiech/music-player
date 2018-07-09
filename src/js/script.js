@@ -55,3 +55,22 @@ const playListActive = () => {
 bottomPanel__icon.addEventListener('click', playListActive);
 playlist__header__button.addEventListener('click', playListActive);
 /*END PlayList section*/
+
+/*Play Button*/
+const playButton = document.querySelector('.button-panel__trigger');
+const playImg = document.querySelector('.play-inactive img');
+
+console.log(playImg);
+
+const turnOnOffMusic = () => {
+    if(playImg.src == 'http://localhost:3000/img/Play_inactive2.png'){
+        playImg.src = "http://localhost:3000/img/Play_active3.png";
+        }
+    else if(playImg.src == 'http://localhost:3000/img/Play_active3.png') {
+        playImg.src = "http://localhost:3000/img/Play_inactive2.png";
+    }
+}
+
+playButton.addEventListener('click', turnOnOffMusic);
+
+/*END Play Button*/
