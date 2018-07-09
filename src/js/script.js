@@ -28,7 +28,7 @@ const songNavActiveNext = () => {
     buttonPanel__next.classList.add('button-panel__song-nav--active');
 }
 
-//buttonPanel__prev.forEach(buttonPanel__prev => buttonPanel__prev.addEventListener('click', songNavActive));
+
 buttonPanel__prev.addEventListener('click', songNavActivePrev);
 buttonPanel__next.addEventListener('click', songNavActiveNext);
 
@@ -42,3 +42,16 @@ buttonPanel__prev.addEventListener('transitionend', removeTransition);
 buttonPanel__next.addEventListener('transitionend', removeTransition);
 
 /*END Button panel section*/
+
+/*PlayList section*/
+const playlist = document.querySelector('.playlist');
+const bottomPanel__icon = document.querySelector('.bottom-panel__icon');
+const playlist__header__button = document.querySelector('.playlist__header__button');
+
+const playListActive = () => {
+    playlist.classList.toggle('playlist--active');
+}
+
+bottomPanel__icon.addEventListener('click', playListActive);
+playlist__header__button.addEventListener('click', playListActive);
+/*END PlayList section*/
