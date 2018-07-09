@@ -1,4 +1,4 @@
-/*Viev more section*/
+/***Viev more section***/
 
 //button
 const header__icon = document.getElementById('header__icon');
@@ -14,7 +14,7 @@ const viewMoreActive = () => {
 
 header__icon.addEventListener('click', viewMoreActive);
 viewMore__button.addEventListener('click', viewMoreActive);
-//END View more section
+/***END Viev more section***/
 
 /***Button panel section***/
 const buttonPanel__prev = document.querySelector('.button-panel__prev');

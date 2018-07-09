@@ -11,7 +11,7 @@ body{
     
     background: #222;
     color: $color-text;
-    font-family: "proxima nova light", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+    font-family: "Source Sans Pro", Helvetica, Arial, Sans-serif;
     font-size: 18px;
 }  
 .row{
@@ -30,7 +30,7 @@ li{
     list-style-type: none;
 }
 section{
-    padding: 20px 0;
+    padding: 15px 0;
 }
 
 h2{
@@ -49,8 +49,10 @@ h2{
     color: $color-text;
     width: 576px;
     height: auto;
+    //in case if image will not load
     background: $color-bg-app;
-    overflow: hidden;
+    background-image: url('/img/background-img.png');
+//    overflow: hidden;
 }
 .header{
     margin-top: 20px;
@@ -83,12 +85,12 @@ h2{
 /*VIEW MORE SECTION*/
 
 .header__view-more{
-    padding-top: 50px;
+    padding-top: 44px;
     position: absolute;
     top: 0;
     left: 100%;
     width: 100%;
-    height: 83.5%;
+    height: 86%;
     background: #1b1b1bfa;
     transition: all 1s;
     
@@ -226,6 +228,10 @@ h2{
     }
 }
 
+.waveform{
+    padding: 0;
+}
+
 .bottom-panel{
     background: $color-bg-bright;
     color: $color-text-dark;
@@ -253,14 +259,83 @@ h2{
 }
 
 .playlist{
-    padding-top: 50px;
+    color: $color-text-dark;
+    padding: 0px;
     position: absolute;
     top: 0%;
-    left: 100%;
+    left: 0%;
     width: 100%;
     height: 100%;
     background: #fff;
     transition: all 1s;
+    
+    .playlist__header{
+        padding: 0px;
+        //in case if image will not load
+        background: $color-bg-app;
+        background-image: url('/img/playlist-bg.png');
+        
+        .playlist__header__button{
+            align-self: center;
+        }
+        
+        .playlist__header__song-title{
+            align-self: center;
+            margin-left: 40px;
+            
+            h4{
+                color: $color-main;
+                font-weight: 300;
+                margin-bottom: 5px;
+            }
+            p{
+                color: $color-text-next;
+                text-transform: uppercase;
+                font-size: 14px
+            }
+        }
+        
+        .playlist__header__icon{
+            display: flex;
+            flex: auto;
+            justify-content: flex-end;
+        }
+    }
+    
+    .playlist__song-list{
+        margin-left: 10px;
+        ul{
+            margin: 0 auto;
+            li{
+                list-style-type: decimal;
+            }
+        }
+    }
+    
+    .playlist__bottom{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        .playlist__bottom__shuffle{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $color-main;
+            width: 448px;
+            height: 59px;
+            border-radius: 30px;
+            cursor: pointer;
+
+            font-size: 20px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: $color-text;
+        }
+    }
+}
+.playlist--active{
+    left: 0;
 }
 /***END MAIN***/
 
