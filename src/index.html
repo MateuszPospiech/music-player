@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/rwd.css">
     <!-- endbuild -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 </head>
 <body>
 
@@ -111,19 +112,38 @@
         
         <section class="slider">
 <!--           TEMP-->
-            <img src="img/unreleased_cover.png" alt="west">
+           <div class="slider__slider">
+<!--
+               <div class="slider__item"><img src="img/cover-1.png" alt="west"></div>
+                <div class="slider__item"><img src="img/cover.png" alt="west"></div>
+-->
+               
+               <div class="slider__item">
+               <img src="img/unreleased_cover.png" alt="west">
+               </div>
+               <div class="slider__item">
+               <img src="img/unreleased_cover.png" alt="west">
+               </div>
+               <div class="slider__item">
+               <img src="img/unreleased_cover.png" alt="west">
+               </div>
+
+           </div>
+            
         </section>
-        
+
         <section class="song">
             <h2>Self Conscious</h2>
             <p>Kanye West</p>
         </section>
         
         <section class="button-panel">
+           
             <div class="row">
                <div class="button-panel__col">
                    <div class="col button-panel__button--shadow"><object id="shuffle_ico" data="img/shuffle_ico.svg" type="image/svg+xml"></object></div>
                     <div class="col button-panel__button--shadow button-panel__prev"><img src="img/previous_ico.svg" alt="prev song"></div>
+                    
                </div>
                 
                 <div class="col play-inactive" id="play-inactive">
@@ -161,14 +181,22 @@
             </div>
         </section>
         
-        
-        
     </main>
     
+     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <!--slick slider CDN-->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+   
     
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <!-- build:js -->
     <script src="js/plugins.js"></script>
     <script src="js/script.js"></script>   <!-- endbuild -->
+    
+    
+    <script>
+
+
+        
+    </script>
 </body>
 </html>
