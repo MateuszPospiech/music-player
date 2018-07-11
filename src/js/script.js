@@ -62,11 +62,12 @@ const playImg = document.querySelector('.play-inactive img');
 
 
 const turnOnOffMusic = () => {
-    if(playImg.src == 'http://localhost:3000/img/Play_inactive2.png'){
-        playImg.src = "http://localhost:3000/img/Play_active3.png";
+    console.log(playImg.src);
+    if(playImg.src == 'http://mateuszpospiech.pl/music/img/Play_inactive.png'){
+        playImg.src = 'http://mateuszpospiech.pl/music/img/Play_active.png';
         }
-    else if(playImg.src == 'http://localhost:3000/img/Play_active3.png') {
-        playImg.src = "http://localhost:3000/img/Play_inactive2.png";
+    else if(playImg.src == 'http://mateuszpospiech.pl/music/img/Play_active.png') {
+        playImg.src = 'http://mateuszpospiech.pl/music/img/Play_inactive.png';
     }
 }
 
