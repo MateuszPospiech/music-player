@@ -60,7 +60,6 @@ playlist__header__button.addEventListener('click', playListActive);
 const playButton = document.querySelector('.button-panel__trigger');
 const playImg = document.querySelector('.play-inactive img');
 
-console.log(playImg);
 
 const turnOnOffMusic = () => {
     if(playImg.src == 'http://localhost:3000/img/Play_inactive2.png'){
@@ -74,3 +73,40 @@ const turnOnOffMusic = () => {
 playButton.addEventListener('click', turnOnOffMusic);
 
 /*END Play Button*/
+
+
+/*Rotate song banner*/
+const rotatePlay = () => {
+    const slickActive = document.querySelectorAll('.slider__item img');
+    
+    for(i=0; i < slickActive.length; i++){
+        slickActive[i].classList.toggle('rollPlayMusic');
+        slickActive[i].classList.toggle('rollEndMusic');
+    }
+}
+
+playButton.addEventListener('click', rotatePlay);
+/*END Rotate song banner*/
+
+/*Repeat button active*/
+const repeatIco = document.querySelector('.button-panel__repeat-ico');
+const repeatButton = document.querySelector('.button-panel__repeat');
+
+const activeRepeat = () => {
+    repeatIco.classList.toggle('button-panel__repeat-ico--active')
+}
+
+repeatButton.addEventListener('click', activeRepeat);
+/*END Repeat button active*/
+
+
+/*Shuffle button active*/
+const shuffleIco = document.querySelector('.button-panel__shuffle-ico');
+const shuffleButton = document.querySelector('.button-panel__shuffle');
+
+const activeShuffle = () => {
+    shuffleIco.classList.toggle('button-panel__shuffle-ico--active')
+}
+
+shuffleButton.addEventListener('click', activeShuffle);
+/*END Shuffle button active*/

@@ -5,9 +5,9 @@ html, body{
 }
 
 body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+//    display: flex;
+//    justify-content: center;
+//    align-items: center;
     
     background: #222;
     color: $color-text;
@@ -35,10 +35,10 @@ section{
 
 h2{
     color: $color-main;
+    font-family: "Source Sans Pro", Helvetica, Arial, Sans-serif;
     font-size: 2rem;
     margin-bottom: 0.3em;
     line-height: 1.2em;
-    font-family: "neosans regular", "Helvetica Neue", Helvetica, Arial, Sans-serif;
     font-weight: 400;
 }
 
@@ -46,6 +46,7 @@ h2{
 
 #main{
     position: relative;
+    margin: 0 auto;
     color: $color-text;
     width: 576px;
     height: auto;
@@ -74,11 +75,12 @@ h2{
         flex-direction: column;
         flex: auto;
         align-items: center;
-        
+
         p{
             color: #9a9b9b;
             margin-bottom: 10px;
             text-transform: uppercase;
+            
         }
     }
 } 
@@ -108,7 +110,7 @@ h2{
     //TEMP
         img{
             width: 40%;
-            margin: 90px auto 15px;  
+            margin: 80px auto 15px;  
         }
 
     }
@@ -130,9 +132,28 @@ h2{
             align-items: center;
             
             li{
-                font-size: 20px;
+                font-size: 24px;
+                font-weight: 300;
                 margin-top: 30px;
+                cursor: pointer;
+                
+                 &::after{
+                    display: block;
+                    content: '';
+                    border-bottom: solid 1px $color-main;
+                    border-image: linear-gradient(to right, transparent, $color-main, transparent);
+                    border-image-slice: 1;
+                    transform: scaleX(0);
+                    transition: transform .3s ease-in-out;
+                    transform-origin: 50% 50%;
+                    padding-top: 3px;
+                }
+                
+                &:hover::after{
+                        transform: scaleX(1);
+                }
             }
+           
         }
         
         img{
@@ -149,38 +170,27 @@ h2{
 /*END VIEW MORE SECTION*/
 
 .slider{
-    //TEMP
+    padding-bottom: 0;
+    .slick-active{
+        img{
+        }
+    }
+    
     .slider__item{
-        position: relative;
-//        transform: scale(0.5);
-        margin: 0;
         
         img{
-            position: absolute;
-            transform: scale(0.5);
-            transition: .5s all;
-        }
-    }
-    .slick-cloned {
-        img{
-            transform: scale(0.5);
-        }
-    } 
-    .slick-center{
-        transform: scale(1);
-        img{
+
             margin: 0 auto;
-            position: relative;
-            transform: scale(1);
         }
-               
     }
+    
 }
 
 .song{
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 0;
     
     p{
          color: #9a9b9b;
@@ -190,6 +200,8 @@ h2{
 }
 
 .button-panel{
+    padding: 0;
+    
     .row{
         justify-content: space-between;
     }
@@ -202,6 +214,7 @@ h2{
     .button-panel__button--shadow{
         //transition - diffrent time on hover and button click
         transition: .17s all ease-in-out, .1s transform;
+        cursor: pointer;
         
         &:hover{
             box-shadow: inset 0px 0px 20px 1px #333, 0px 0px 16px 1px #333;
@@ -234,6 +247,17 @@ h2{
             
         }
     }
+    //svg repeat
+    .button-panel__repeat-ico,
+    .button-panel__shuffle-ico{
+        fill: #b3b3b3;
+        fill-rule: evenodd;
+      }
+    
+    .button-panel__repeat-ico--active,
+    .button-panel__shuffle-ico--active{
+        fill: darken($color-main, 10%);
+    }
 }
 
 .button-panel__song-nav--active{
@@ -254,7 +278,7 @@ h2{
 }
 
 .waveform{
-    padding: 0;
+    padding-bottom: 0;
 }
 
 .bottom-panel{
@@ -400,7 +424,25 @@ h2{
 }
 /***END MAIN***/
 
+/***key frames***/
+//Roll when play
+.rollPlayMusic{
+    animation: rollPlayMusic 6s infinite;
+    animation-timing-function: linear;
+        }
+@keyframes rollPlayMusic{
+    100%{transform: rotateZ(360deg);}
+        }
 
+//Roll onLoad app and after stop music
+.rollEndMusic{
+    animation: rollEndMusic 0.3s;
+    animation-timing-function: linear;
+        }
+@keyframes rollEndMusic{
+    100%{transform: rotateZ(360deg);}
+        }
+/***END key frames***/
 
 
 
