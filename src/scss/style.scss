@@ -86,7 +86,7 @@ h2{
 } 
 /*VIEW MORE SECTION*/
 
-.header__view-more{
+.view-more{
     z-index: 2;
     opacity: 0;
     padding-top: 44px;
@@ -94,19 +94,26 @@ h2{
     top: 0;
     left: 100%;
     width: 100%;
-    height: 87.6%;
+    height: 86.2%;
     background: #1b1b1bfa;
     transition: left 1s, opacity 0.5s;
     
-    .header__view-more__button{
+    .view-more__button{
         cursor: pointer;
+    }
+    .view-more__icon{
+        
+        .view-more__icon--off {
+            fill: #fff;
+            fill-rule: evenodd;
+          }
     }
     
     .row{
         justify-content: space-between;
     }
     
-    .header__view-more__slider{
+    .view-more__slider{
     //TEMP
         img{
             width: 40%;
@@ -115,7 +122,7 @@ h2{
 
     }
 
-    .header__view-more__song{
+    .view-more__song{
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -126,44 +133,55 @@ h2{
             text-transform: uppercase;
         }
     }
-    .header__view-more__menu{
+    .view-more__menu{
         
         ul{
             align-items: center;
-            
+    
             li{
-                font-size: 24px;
-                font-weight: 300;
                 margin-top: 30px;
-                cursor: pointer;
+                transition: color .35s;
                 
-                 &::after{
-                    display: block;
-                    content: '';
-                    border-bottom: solid 1px $color-main;
-                    border-image: linear-gradient(to right, transparent, $color-main, transparent);
-                    border-image-slice: 1;
-                    transform: scaleX(0);
-                    transition: transform .3s ease-in-out;
-                    transform-origin: 50% 50%;
-                    padding-top: 3px;
+                &:nth-child(1){
+                    font-size: 24px;
+                    color: $color-text-next;
+                    margin-bottom: 20px;
+                    text-align: center;
+                    letter-spacing: 25px;
+                    text-indent: 25px;
                 }
                 
-                &:hover::after{
+                &:nth-child(1n+2){
+                    font-size: 24px;
+                    font-weight: 300;
+                    cursor: pointer;
+
+                     &::after{
+                        display: block;
+                        content: '';
+                        border-bottom: solid 1px $color-main;
+                        border-image: linear-gradient(to right, transparent, $color-main, transparent);
+                        border-image-slice: 1;
+                        transform: scaleX(0);
+                        transition: transform .3s ease-in-out;
+                        transform-origin: 50% 50%;
+                        padding-top: 3px;
+                    }
+                    
+                    &:hover{
+                        color: darken($color-text, 30%);
+                    }
+                    
+                    &:hover::after{
                         transform: scaleX(1);
-                }
-            }
-           
-        }
-        
-        img{
-            transform: rotate(90deg);
-            
+                    }
+                } 
+            }  
         }
     }
 }
 
-.header__view-more--active{
+.view-more--active{
     left: 0;
     opacity: 1;
 }
@@ -396,6 +414,8 @@ h2{
         justify-content: center;
         
         .playlist__bottom__shuffle{
+            position: relative;
+            overflow: hidden;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -404,16 +424,48 @@ h2{
             height: 59px;
             border-radius: 30px;
             cursor: pointer;
-
+            transition: all .35s ease-in-out;
+            
             font-size: 20px;
             font-weight: 700;
             text-transform: uppercase;
             color: $color-text;
+            
+            
+            &:hover{
+                background-color: darken($color-main, 15%);
+                
+                img{
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+                p{
+                    top: -100%;
+                }
+            }
+            
+            img{
+                transition: all .35s ease-in-out;
+                position: absolute;
+                top: 100%;
+            }
+            p{
+                transition: all .35s ease-in-out;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+            }
         }
-        img{
+        .playlist__bottom__scroll{
             margin-top: 25px;
-            transform: rotate(-90deg);
-            cursor: pointer;
+            align-self: center;
+            animation: bounceArrow 1.5s infinite;
+            animation-timing-function: linear;
+            
+            img{
+                transform: rotate(-90deg);
+                cursor: pointer;
+            }
         }
     }
 }
@@ -442,8 +494,14 @@ h2{
 @keyframes rollEndMusic{
     100%{transform: rotateZ(360deg);}
         }
-/***END key frames***/
 
+//Bounce arrow
+@keyframes bounceArrow{
+    0%{transform: translateY(0px);}
+    50%{transform: translateY(6px);}
+        }
+
+/***END key frames***/
 
 
 

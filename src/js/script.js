@@ -2,14 +2,14 @@
 
 //button
 const header__icon = document.getElementById('header__icon');
-const viewMore__button = document.querySelector('.header__view-more__button');
+const viewMore__button = document.querySelector('.view-more__button');
 //section
-const viewMore = document.getElementById('header__view-more');
+const viewMore = document.getElementById('view-more');
 
 
 
 const viewMoreActive = () => {
-    viewMore.classList.toggle('header__view-more--active');
+    viewMore.classList.toggle('view-more--active');
 }
 
 header__icon.addEventListener('click', viewMoreActive);

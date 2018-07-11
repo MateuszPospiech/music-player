@@ -45,23 +45,36 @@
             </div>   
         </section>
         
-        <section class="header__view-more" id="header__view-more">
+        <section class="view-more" id="view-more">
             <div class="row">
-                <div class="header__view-more__button"><img src="img/back_ico.svg" alt=""></div>
-                <div class="header__view-more__icon"><img src="img/more_ico.svg" alt=""></div>
+                <div class="view-more__button"><img src="img/back_ico.svg" alt="back button"></div>
+                <div class="view-more__icon">               
+                   <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 4 29">
+                      <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+                    <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ">
+                       <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                          <rdf:Description rdf:about=""/>
+                       </rdf:RDF>
+                    </x:xmpmeta>
+                    <?xpacket end="w"?></metadata>
+                    <defs>
+                      </defs>
+                      <path id="more_ico" class="view-more__icon--off" d="M1023,163.031a1.985,1.985,0,1,1-2,1.985A2,2,0,0,1,1023,163.031Zm0-12.531a2,2,0,1,1-2,2A2,2,0,0,1,1023,150.5Zm0-12.5a1.985,1.985,0,1,1-2,1.984A1.995,1.995,0,0,1,1023,138Z" transform="translate(-1021 -138)"/>
+                    </svg>
+                </div>
             </div>
             
-            <div class="header__view-more__slider">
+            <div class="view-more__slider">
                 <img src="img/unreleased_cover.png" alt="west">
             </div>
 
-            <div class="header__view-more__song">
+            <div class="view-more__song">
                 <h2>Self Conscious</h2>
                 <p>Kanye West</p>
             </div>
-            <div class="header__view-more__menu">
+            <div class="view-more__menu">
                 <ul class="row-column">
-                    <li><img src="img/more_ico.svg" alt=""></li>
+                    <li>...</li>
                     <li><a href="#"></a>Add to playlist</li>
                     <li><a href="#"></a>Show album</li>
                     <li><a href="#"></a>Share with friends</li>
@@ -103,62 +116,49 @@
             
             <section class="playlist__bottom">
                <div class="row-column">
-                    <div class="playlist__bottom__shuffle">Shuffle play</div>
-                    <img src="img/back_ico.svg" alt="back icon">
+                    <div class="playlist__bottom__shuffle">
+                        <p>Shuffle play</p>
+                        <img src="img/shuffle_ico.svg" alt="back icon">
+                    </div>
+                    <div class="playlist__bottom__scroll">
+                        <img src="img/back_ico.svg" alt="back icon">
+                    </div>
                </div>
                 
             </section>
         </section>
         
         <section class="slider">
-<!--           TEMP-->
            <div class="slider__slider">
-<!--
-               <div class="slider__item"><img src="img/cover-1.png" alt="west"></div>
-                <div class="slider__item"><img src="img/cover.png" alt="west"></div>
--->
-               
                <div class="slider__item">
-               <img src="img/unreleased_cover.png" alt="west" class="rollEndMusic">
-               <section class="song">
-                    <h2>Self Conscious</h2>
-                    <p>Kanye West</p>
-                </section>
+                   <img src="img/unreleased_cover.png" alt="west" class="rollEndMusic">
+                   <section class="song">
+                        <h2>Self Conscious</h2>
+                        <p>Kanye West</p>
+                    </section>
                </div>
                <div class="slider__item">
-               <img src="img/unreleased_cover.png" alt="west" class="rollEndMusic">
-               <section class="song">
-                    <h2>Self Conscious</h2>
-                    <p>Kanye West</p>
-                </section>
+                   <img src="img/unreleased_cover.png" alt="west" class="rollEndMusic">
+                   <section class="song">
+                        <h2>Self Conscious</h2>
+                        <p>Kanye West</p>
+                    </section>
                </div>
                <div class="slider__item">
-               <img src="img/unreleased_cover.png" alt="west" class="rollEndMusic">
-               <section class="song">
-                    <h2>Self Conscious</h2>
-                    <p>Kanye West</p>
-                </section>
+                   <img src="img/unreleased_cover.png" alt="west" class="rollEndMusic">
+                   <section class="song">
+                        <h2>Self Conscious</h2>
+                        <p>Kanye West</p>
+                    </section>
                </div>
-
-           </div>
-            
-            
+           </div>   
         </section>
-
-<!--
-        <section class="song">
-            <h2>Self Conscious</h2>
-            <p>Kanye West</p>
-        </section>
--->
         
         <section class="button-panel">
            
             <div class="row">
                <div class="button-panel__col">
-                   <div class="col button-panel__button--shadow button-panel__shuffle">
-<!--                   <object id="shuffle_ico" data="img/shuffle_ico.svg" type="image/svg+xml"></object>-->
-                  
+                   <div class="col button-panel__button--shadow button-panel__shuffle">                  
                       <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
                           <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
                         <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ">
@@ -185,8 +185,6 @@
                 <div class="button-panel__col">
                     <div class="col button-panel__button--shadow button-panel__next"><img src="img/next_ico.svg" alt="next song"></div>
                     <div class="col button-panel__button--shadow button-panel__repeat">
-<!--                        <img src="img/repeat_ico.svg" alt="repeat">-->
-                   
                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
                           <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
                         <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ">
