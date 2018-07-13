@@ -66,11 +66,11 @@ console.log(playImg.srcset);
 
 const turnOnOffMusic = () => {
     console.log(playImg.src);
-    if(playImg.srcset == 'img/Play_inactive-300w.png 150w, img/Play_inactive.png 320w'){
-        playImg.srcset = 'img/Play_active-300w.png 150w, img/Play_active.png 320w';
+    if(playImg.srcset == 'http://mateuszpospiech.pl/ui-music/img/Play_inactive-300w.png 150w, http://mateuszpospiech.pl/ui-music/img/Play_inactive.png 320w'){
+        playImg.srcset = 'http://mateuszpospiech.pl/ui-music/img/Play_active-300w.png 150w, http://mateuszpospiech.pl/ui-music/img/Play_active.png 320w';
         }
-    else if(playImg.srcset == 'img/Play_active-300w.png 150w, img/Play_active.png 320w') {
-        playImg.srcset = 'img/Play_inactive-300w.png 150w, img/Play_inactive.png 320w';
+    else if(playImg.srcset == 'http://mateuszpospiech.pl/ui-music/img/Play_active-300w.png 150w, http://mateuszpospiech.pl/ui-music/img/Play_active.png 320w') {
+        playImg.srcset = 'http://mateuszpospiech.pl/ui-music/img/Play_inactive-300w.png 150w, http://mateuszpospiech.pl/ui-music/img/Play_inactive.png 320w';
     }
 }
 
