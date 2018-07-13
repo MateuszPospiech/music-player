@@ -32,20 +32,7 @@
 </head>
 <body>
 
-    <main id="main">
-       
-        <section class="header">
-            <div class="row">
-                <div class="header__button"><img src="img/back_ico.svg" alt="back icon"></div>
-                <div class="header__album-title">
-                    <p>Album</p>
-                    <h3>Unreleased</h3>
-                </div>
-                <div class="header__icon" id="header__icon"><img src="img/more_ico.svg" alt="more icon"></div>
-            </div>   
-        </section>
-        
-        <section class="view-more" id="view-more">
+    <section class="view-more" id="view-more">
             <div class="row">
                 <div class="view-more__button"><img src="img/back_ico.svg" alt="back button"></div>
                 <div class="view-more__icon">               
@@ -82,7 +69,7 @@
             </div>
         </section>
         
-        <section class="playlist" id="playlist">
+    <section class="playlist" id="playlist">
            
             <section class="playlist__header">
                 <div class="row">
@@ -129,25 +116,45 @@
             </section>
             
         </section>
+
+    <header id="header">
         
+        <section class="header">
+            <div class="row">
+                <div class="header__button"><img src="img/back_ico.svg" alt="back icon"></div>
+                <div class="header__album-title">
+                    <p>Album</p>
+                    <h3>Unreleased</h3>
+                </div>
+                <div class="header__icon" id="header__icon"><img src="img/more_ico.svg" alt="more icon"></div>
+            </div>   
+        </section>
+        
+    </header>
+   
+    <main id="main">
+       
         <section class="slider">
            <div class="slider__slider">
                <div class="slider__item">
-                   <img src="img/unreleased_cover.png" alt="west" class="rollEndMusic">
+                   <img srcset="img/unreleased_cover-300w.png 150w, img/unreleased_cover.png 320w" sizes="(max-width: 400px) 160px, (max-width: 500px) 200px, 320px" alt="waveform" class="rollEndMusic">
+                   
                    <section class="song">
                         <h2>Self Conscious</h2>
                         <p>Kanye West</p>
                     </section>
                </div>
                <div class="slider__item">
-                   <img src="img/unreleased_cover.png" alt="west" class="rollEndMusic">
+                    <img srcset="img/unreleased_cover-300w.png 150w, img/unreleased_cover.png 320w" sizes="(max-width: 400px) 160px, (max-width: 500px) 200px, 320px" alt="waveform" class="rollEndMusic">
+                  
                    <section class="song">
                         <h2>Self Conscious</h2>
                         <p>Kanye West</p>
                     </section>
                </div>
                <div class="slider__item">
-                   <img src="img/unreleased_cover.png" alt="west" class="rollEndMusic">
+                    <img srcset="img/unreleased_cover-300w.png 150w, img/unreleased_cover.png 320w" sizes="(max-width: 400px) 160px, (max-width: 500px) 200px, 320px" alt="waveform" class="rollEndMusic">
+                  
                    <section class="song">
                         <h2>Self Conscious</h2>
                         <p>Kanye West</p>
@@ -155,6 +162,47 @@
                </div>
            </div>   
         </section>
+        
+        <section class="view-more" id="view-more">
+            <div class="row">
+                <div class="view-more__button"><img src="img/back_ico.svg" alt="back button"></div>
+                <div class="view-more__icon">               
+                   <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 4 29">
+                      <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+                    <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ">
+                       <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                          <rdf:Description rdf:about=""/>
+                       </rdf:RDF>
+                    </x:xmpmeta>
+                    <?xpacket end="w"?></metadata>
+                    <defs>
+                      </defs>
+                      <path id="more_ico" class="view-more__icon--off" d="M1023,163.031a1.985,1.985,0,1,1-2,1.985A2,2,0,0,1,1023,163.031Zm0-12.531a2,2,0,1,1-2,2A2,2,0,0,1,1023,150.5Zm0-12.5a1.985,1.985,0,1,1-2,1.984A1.995,1.995,0,0,1,1023,138Z" transform="translate(-1021 -138)"/>
+                    </svg>
+                </div>
+            </div>
+            
+            <div class="view-more__slider">
+                <img src="img/unreleased_cover.png" alt="west">
+            </div>
+
+            <div class="view-more__song">
+                <h2>Self Conscious</h2>
+                <p>Kanye West</p>
+            </div>
+            <div class="view-more__menu">
+                <ul class="row-column">
+                    <li>...</li>
+                    <li><a href="#"></a>Add to playlist</li>
+                    <li><a href="#"></a>Show album</li>
+                    <li><a href="#"></a>Share with friends</li>
+                </ul>    
+            </div>
+        </section>
+          
+    </main>
+    
+    <footer id="footer">
         
         <section class="button-panel">
            
@@ -180,7 +228,10 @@
                </div>
                 
                 <div class="col play-inactive" id="play-inactive">
-                    <img src="img/Play_inactive.png" alt="play">
+<!--                    <img src="img/Play_inactive.png" alt="play">-->
+                    
+                    <img srcset="img/Play_inactive-300w.png 150w, img/Play_inactive.png 320w" sizes="(max-width: 360px) 150px,  (max-width: 456px) 250px, 300px" alt="waveform">
+                    
                     <div class="button-panel__trigger"></div>
                 </div>
                 
@@ -213,7 +264,14 @@
         </section>
         
         <section class="waveform">
-            <img src="img/waveform.png" alt="waveform">
+            <img srcset="http://mateuszpospiech.pl/music-rwd/img/waveform-320w.png 300w, http://mateuszpospiech.pl/music-rwd/img/waveform.png 500w" sizes="(max-width: 375px) 300px, 500px" alt="waveform">
+            
+            
+<!--
+            <img srcset="img/mateuszpospiech-green-300px.png 300w, img/mateuszpospiech-green-500px.png 500w" 
+                        sizes="(max-width: 500px) 300px, 500px"
+                        alt="Mateusz Pośpiech Webmaster">
+-->
         </section>
         
         <section class="bottom-panel">
@@ -227,8 +285,8 @@
             </div>
         </section>
         
-    </main>
-    
+    </footer>
+
     <!--jQuery CDN with location-->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <!--slick slider CDN-->

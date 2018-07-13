@@ -7,6 +7,9 @@
     .wrapper {
         max-width: 540px;
     }
+    .button-panel .button-panel__col{
+        justify-content: space-around;
+    }
 }
 
 @media (min-width: 768px) {
@@ -27,3 +30,35 @@
     }
 }
 /***END WRAPPER***/
+/*Button Play Trigger*/
+@media(min-width: 361px){
+    .button-panel .play-inactive .button-panel__trigger{
+            height: 108px ;
+            width: 108px ;
+        }
+    .view-more{
+        height: 85%;
+    }
+}
+@media(min-width: 457px){
+    .button-panel .play-inactive .button-panel__trigger{
+        height: 134px;
+        width: 134px;
+    }
+}
+/*END Button Play Trigger*/
+
+@media(min-width: 400px){
+    body{
+        font-size: 15px;
+    }
+    .row{
+        padding: 0 30px;
+    }
+    .playlist .playlist__bottom .playlist__bottom__shuffle{
+        width: 380px;
+    }
+    .view-more{
+        height: 86.5%;
+    }
+}

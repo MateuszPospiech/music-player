@@ -1,7 +1,7 @@
 $(document).ready(function(){
     $('.slider__slider').slick({
         centerMode: true,
-        centerPadding: '60px',
+        centerPadding: '40px',
         slidesToShow: 1,
         arrows: false,
     });

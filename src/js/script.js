@@ -3,10 +3,12 @@
 //button
 const header__icon = document.getElementById('header__icon');
 const viewMore__button = document.querySelector('.view-more__button');
+
+const test = document.querySelector('.waveform img');
 //section
 const viewMore = document.getElementById('view-more');
 
-
+console.log(viewMore__button);
 
 const viewMoreActive = () => {
     viewMore.classList.toggle('view-more--active');
@@ -60,14 +62,15 @@ playlist__header__button.addEventListener('click', playListActive);
 const playButton = document.querySelector('.button-panel__trigger');
 const playImg = document.querySelector('.play-inactive img');
 
+console.log(playImg.srcset);
 
 const turnOnOffMusic = () => {
     console.log(playImg.src);
-    if(playImg.src == 'http://mateuszpospiech.pl/music/img/Play_inactive.png'){
-        playImg.src = 'http://mateuszpospiech.pl/music/img/Play_active.png';
+    if(playImg.srcset == 'img/Play_inactive-300w.png 150w, img/Play_inactive.png 320w'){
+        playImg.srcset = 'img/Play_active-300w.png 150w, img/Play_active.png 320w';
         }
-    else if(playImg.src == 'http://mateuszpospiech.pl/music/img/Play_active.png') {
-        playImg.src = 'http://mateuszpospiech.pl/music/img/Play_inactive.png';
+    else if(playImg.srcset == 'img/Play_active-300w.png 150w, img/Play_active.png 320w') {
+        playImg.srcset = 'img/Play_inactive-300w.png 150w, img/Play_inactive.png 320w';
     }
 }
 
